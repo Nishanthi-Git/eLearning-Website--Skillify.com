@@ -6,8 +6,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Quicksand", serif;
-   
-    
 }
 body{
     position: relative;
@@ -3052,9 +3050,7 @@ footer{
         width: 260px;
         margin-left: -40px;
     }
-    *{
-        outline: 1px solid red;
-    }
+    
     .education{
         min-width: 100%;
         display: flex;
@@ -6955,9 +6951,7 @@ footer{
         width: 260px;
         margin-left: -40px;
     }
-    *{
-        outline: 1px solid red;
-    }
+    
     .education{
         min-width: 100%;
         display: flex;
