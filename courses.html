@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillify.com</title>
+    <link rel="icon" href="images/skillify-icon.png"  type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/skillify-logo.png">
+            </a>
+        </div>
+        <div class="ham-bar">
+            <button class="ham-barbtn"><img src="images/menu.png" alt="Menu" id="menu-icon"></button>
+        </div>
+        <div class="nav">
+            <a href="index.html" class="main">Home</a>
+            <a href="about.html"class="main">About</a>
+            <a href="courses.html"class="main">Courses</a>
+            <a href="#Contact" class="main">Contact</a>
+            <div class="dropdown">
+                <button class="dropbtn">Pages</button>
+                  <div class="dropdown-content">
+                    <a href="teacher.html">Teacher - Profile</a>
+                    <a href="courses.html">Course-Select</a>
+                    <a href="payment.html">Payment-Page</a>
+            </div> 
+        </div>
+        <div class="sign-btn">
+            <button class="singup-btn">Sing-Up</button>
+            <button class="login-btn">Login</button>
+        </div>
+    </header>
+
+    <section class="head-banner-container">
+
+        <h1 class="banner-head">Courses</h1>
+        <div class="abstract">
+            <img src="images/3d abstracts 2.png" class="Tab1">
+            <img src="images/3d abstracts 3.png" class="Tab3">
+            <img src="images/3d abstracts 6.png" class="Tab6">
+            <img src="images/3d abstracts 5.png" class="Tab5">
+        </div>    
+
+    </section>
+
+
+    <section class="popular-courses-coursepage">
+
+       <div class="filter-content" id="filterContent">
+            <div class="category">
+                <h3 class="filter-heading">Filter by categories</h3>
+                <div class="input-container">
+                    <div class="category-inputs">
+                        <input type="checkbox" name="art" id="web">
+                        <label for="web">Web Development</label>
+                        <p class="class-no">15</p>
+                    </div>
+                    <div class="category-inputs">
+                        <input type="checkbox" name="art" id="Digital">
+                        <label for="Digital">Digital Marketing</label>
+                        <p class="class-no">10</p>
+                    </div>
+                    <div class="category-inputs">
+                        <input type="checkbox" name="art" id="Video">
+                        <label for="Video">Video Editing</label>
+                        <p class="class-no">25</p>
+                    </div>
+                    <div class="category-inputs">
+                        <input type="checkbox" name="art" id="Graphics">
+                        <label for="Graphics">Graphics Design</label>
+                        <p class="class-no">10</p>
+                    </div>
+                    <div class="category-inputs">
+                        <input type="checkbox" name="art" id="Full">
+                        <label for="Full">Full-Stack Development</label>
+                        <p class="class-no">25</p>
+                    </div>
+                    <div class="category-inputs">
+                        <input type="checkbox" name="art" id="Self">
+                        <label for="Self">Self Improvement</label>
+                        <p class="class-no">5</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="instructors">
+                <h3 class="filter-heading">Instructors</h3>
+                <div class="input-container">
+                    <div class="category-inputs">
+                        <input type="checkbox" name="art" id="Sofia">
+                        <label for="Sofia">Sofia Lee</label>
+                        <p class="class-no">15</p>
+                    </div>
+                    <div class="category-inputs">
+                        <input type="checkbox" name="art" id="David">
+                        <label for="David">David Cater</label>
+
+                        <p class="class-no">15</p>
+                    </div>
+                    <div class="category-inputs">
+                        <input type="checkbox" name="art" id="Emma">
+                        <label for="Emma">Emma Johnson</label>
+                        <p class="class-no">15</p>
+                    </div>
+                </div>
+            </div>
+            <div class="level">
+                <h3 class="filter-heading">Level</h3>
+                <div class="input-container">
+                    <div class="category-inputs">
+                        <input type="checkbox" name="art" id="AllLevels">
+                        <label for="AllLevels">All Levels</label>
+                        <p class="class-no">85</p>
+                    </div>
+                    <div class="category-inputs">
+                        <input type="checkbox" name="art" id="Beginner">
+                        <label for="Beginner">Beginner</label>
+                        <p class="class-no">35</p>
+                    </div>
+                    <div class="category-inputs">
+                        <input type="checkbox" name="art" id="Intermediate">
+                        <label for="Intermediate">Intermediate</label>
+                        <p class="class-no">25</p>
+                    </div>
+                    <div class="category-inputs">
+                        <input type="checkbox" name="art" id="Expert">
+                        <label for="Expert">Expert</label>
+                        <p class="class-no">15</p>
+                    </div>
+                </div>
+            </div>
+            <div class="price">
+                <h3 class="filter-heading">Filter By Price</h3>
+                <div class="filter-range">
+                    <input type="range" min="20" max="180" value="70" id="slider" >
+                    <div id="slider-value">Price : $70</div>
+                </div>
+            </div>
+
+            <button class="filter-btn">Apply Filters</button>
+        
+
+        </div>
+
+
+        <div class="course-filter">
+            <p>Showing 1-9 of 32 results</p>
+            <div class="search-course">
+                <input type="text" name="search" id="search" placeholder="Search...">
+                <button class="button"><img src="images/search.png"></button>
+            </div>
+            <button class="filter-button">Filter</button>
+        </div>
+
+
+        <div class="pc-course-container">
+
+
+            <div class="pc-card1">
+                <div class="pc-content">
+                    <div class="pc-img">
+                        <img src="images/Digital marketing.jpg" >
+                    </div>
+                    <div class="pc-tutor">
+                        <img src="images/teacher-1.png" >
+                        <h5>Emma Johnson ⭐ (4.9)</h5>
+                        
+                    </div>
+                    <div class="pc-name">
+                        <h3>Digital Marketing Masterclass</h3>
+                    </div>
+                    <div class="pc-info">
+                        <p>150 Students</p>
+                        <p>30 Lessons</p>
+                    </div>
+                </div>
+                <div class="pc-price">
+                    <h3>$80</h3>
+                </div>
+
+                <a href="" class="select-course-btn">Select Course</a>
+                
+            </div>
+
+
+
+            <div class="pc-card1"> 
+                <div class="pc-content">
+                    <div class="pc-img">
+                        <img src="images/Full-Stack Developer.jpg" >
+                    </div>
+                    <div class="pc-tutor">
+                        <img src="images/teacher-4.png" >
+                        <h5>David Carter ⭐(5.0)</h5>
+                        
+                    </div>
+                    <div class="pc-name">
+                        <h3>Full-Stack Web Development</h3>
+                    </div>
+                    <div class="pc-info">
+                        <p>250 Students</p>
+                        <p>35 Lessons</p>
+                    </div>
+                </div>
+                <div class="pc-price">
+                    <h3>$120</h3>
+                </div>
+
+                <a href="" class="select-course-btn">Select Course</a>
+
+            </div>
+
+
+            <div class="pc-card1">
+                <div class="pc-content">
+                    <div class="pc-img">
+                        <img src="images/UI UX design.jpg" >
+                    </div>
+                    <div class="pc-tutor">
+                        <img src="images/teacher-2.png" >
+                        <h5>Sophia Lee ⭐ (4.5)</h5>
+                        
+                    </div>
+                    <div class="pc-name">
+                        <h3>UI/UX Design Essentials</h3>
+                    </div>
+                    <div class="pc-info">
+                        <p>200 Students</p>
+                        <p>25 Lessons</p>
+                    </div>
+                </div>
+                <div class="pc-price">
+                    <h3>$70</h3>
+                </div>
+
+                <a href="" class="select-course-btn">Select Course</a>
+
+            </div> 
+
+
+            <div class="pc-card1">
+                <div class="pc-content">
+                    <div class="pc-img">
+                        <img src="images/course6.jpg" >
+                    </div>
+                    <div class="pc-tutor">
+                        <img src="images/teacher-4.png" >
+                        <h5>Emma Johnson ⭐ (4.9)</h5>
+                        
+                    </div>
+                    <div class="pc-name">
+                        <h3>Digital Marketing Masterclass</h3>
+                    </div>
+                    <div class="pc-info">
+                        <p>150 Students</p>
+                        <p>30 Lessons</p>
+                    </div>
+                </div>
+                <div class="pc-price">
+                    <h3>$80</h3>
+                </div>
+
+                <a href="" class="select-course-btn">Select Course</a>
+
+            </div>
+
+
+
+            <div class="pc-card1"> 
+                <div class="pc-content">
+                    <div class="pc-img">
+                        <img src="images/courrse7.jpg" >
+                    </div>
+                    <div class="pc-tutor">
+                        <img src="images/teacher-2.png" >
+                        <h5>David Carter ⭐(5.0)</h5>
+                        
+                    </div>
+                    <div class="pc-name">
+                        <h3>Full-Stack Web Development</h3>
+                    </div>
+                    <div class="pc-info">
+                        <p>250 Students</p>
+                        <p>35 Lessons</p>
+                    </div>
+                </div>
+                <div class="pc-price">
+                    <h3>$120</h3>
+                </div>
+
+                <a href="" class="select-course-btn">Select Course</a>
+
+            </div>
+
+
+            <div class="pc-card1">
+                <div class="pc-content">
+                    <div class="pc-img">
+                        <img src="images/course8.jpg" >
+                    </div>
+                    <div class="pc-tutor">
+                        <img src="images/teacher-1.png" >
+                        <h5>Sophia Lee ⭐ (4.5)</h5>
+                        
+                    </div>
+                    <div class="pc-name">
+                        <h3>UI/UX Design Essentials</h3>
+                    </div>
+                    <div class="pc-info">
+                        <p>200 Students</p>
+                        <p>25 Lessons</p>
+                    </div>
+                </div>
+                <div class="pc-price">
+                    <h3>$70</h3>
+                </div>
+
+                <a href="" class="select-course-btn">Select Course</a>
+
+            </div> 
+
+            <div class="pc-card1">
+                <div class="pc-content">
+                    <div class="pc-img">
+                        <img src="images/course9.jpg" >
+                    </div>
+                    <div class="pc-tutor">
+                        <img src="images/teacher-1.png" >
+                        <h5>Emma Johnson ⭐ (4.9)</h5>
+                        
+                    </div>
+                    <div class="pc-name">
+                        <h3>Digital Marketing Masterclass</h3>
+                    </div>
+                    <div class="pc-info">
+                        <p>150 Students</p>
+                        <p>30 Lessons</p>
+                    </div>
+                </div>
+                <div class="pc-price">
+                    <h3>$80</h3>
+                </div>
+
+                <a href="" class="select-course-btn">Select Course</a>
+
+            </div>
+
+
+
+            <div class="pc-card1"> 
+                <div class="pc-content">
+                    <div class="pc-img">
+                        <img src="images/course4.jpg" >
+                    </div>
+                    <div class="pc-tutor">
+                        <img src="images/teacher-4.png" >
+                        <h5>David Carter ⭐(5.0)</h5>
+                        
+                    </div>
+                    <div class="pc-name">
+                        <h3>Full-Stack Web Development</h3>
+                    </div>
+                    <div class="pc-info">
+                        <p>250 Students</p>
+                        <p>35 Lessons</p>
+                    </div>
+                </div>
+                <div class="pc-price">
+                    <h3>$120</h3>
+                </div>
+
+                <a href="" class="select-course-btn">Select Course</a>
+
+            </div>
+
+
+            <div class="pc-card1">
+                <div class="pc-content">
+                    <div class="pc-img">
+                        <img src="images/course5.jpg" >
+                    </div>
+                    <div class="pc-tutor">
+                        <img src="images/teacher-2.png" >
+                        <h5>Sophia Lee ⭐ (4.5)</h5>
+                        
+                    </div>
+                    <div class="pc-name">
+                        <h3>UI/UX Design Essentials</h3>
+                    </div>
+                    <div class="pc-info">
+                        <p>200 Students</p>
+                        <p>25 Lessons</p>
+                    </div>
+                </div>
+                <div class="pc-price">
+                    <h3>$70</h3>
+                </div>
+
+                <a href="" class="select-course-btn">Select Course</a>
+                
+                
+            </div> 
+            
+        </div>
+
+        <div class="page-btns">
+            <a href="courses.html" class="page-btn">&#11207;</a>
+            <a href="courses.html" class="page-btn">1</a>
+            <a href="courses.html" class="page-btn">2</a>
+            <a href="courses.html" class="page-btn">3</a>
+            <a href="courses.html" class="page-btn">4</a>
+            <a href="courses.html" class="page-btn">&#11208;</a>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-1">
+                <div class="social">
+                    <img class="social-img" src="images/skillify-logo.png">
+                    <p>Skillify is an innovative e-learning platform offering expert-led courses to help you build in-demand skills. With practical projects and flexible learning, we empower you to achieve your career goals.</p>
+                    <div class="social-logo">
+                            <img src="images/facebook.png">
+                            <img src="images/twitter.png">
+                            <img src="images/linkedin.png">
+                            <img src="images/instagram-logo.png">
+                    </div>
+                </div>
+                <div class="links">
+                    <div class="link1">
+                        <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="teacher.html">Teachers</a></li>
+                    </ul>
+                    </div>
+                    <div class="link2">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li><a href="index.html">Contact Us</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="teacher.html">Sign Up</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contact" id="Contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><img src="images/email.png">skillify@gmail.com</li>
+                        <li><img src="images/telephone-call.png">+987456321123</li>
+                        <li><img src="images/maps-and-flags.png">No.123, Education Street, ABCD Country.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-2">
+                <p class="copy">&copy; 2025 Nishanthi. All rights reserved.</p>
+                <div class="policy">
+                        <p>Privacy Policy<p>
+                        <p>Terms</p>
+                        <p>FAQ</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="go-up" id="goup-btn">
+        <a href="index.html" id="goup-btn"><img src="images/upload.png"></a>
+    </div>
+
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>    
