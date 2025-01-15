@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillify.com</title>
+    <link rel="icon" href="images/skillify-icon.png"  type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/skillify-logo.png">
+        </a>
+    </div>
+
+    <div class="login-container">
+        <div class="img-part">
+            <img src="login.png">
+        </div>
+        
+            <div id="login-part" class="info-container">
+                <div class="button-div">
+                    <button id="login">Log-in</button>
+                </div>
+                <div class="login-content" id="login-content">
+                    <div class="google-div">
+                        <button>Use Google account</button>
+                    </div>
+    
+                    <div class="or-div">
+                        <p>or</p>
+                    </div>
+                    
+                    <div class="entry-div">
+                        <input type="email" name="entry-email" id="login-email" placeholder="Enter your email" class="entry-email" required>
+                        <div class="password-container">
+                            <input type="password" id="login-password" placeholder="Enter your password" class="password" required>
+                            <button type="button" class="toggle-password" onclick="togglePassword('login-password', this)">
+                                👁️
+                            </button>
+                        </div>    
+                    </div>
+                    <div class="forgot-div">
+                        <button id="log-in" type="submit" onclick="loginSubmit()">Login</button>
+                        <a href="" class="forget">Forgot Password?</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="signup-part" class="signup-info-container">
+                <div class="signbutton-div">
+                    <button class="signbutton" id="signup">Sign up</button>
+                </div>
+                <div class="signup-content" id="signup-content">
+                    <div class="google-div">
+                        <button>Use Google account</button>
+                    </div>
+    
+                    <div class="or-div">
+                        <p>or</p>
+                    </div>
+                    
+                    <div class="entry-div">
+                        <input type="email" name="entry-email" id="signup-email" placeholder="Enter your email" required class="entry-email" >
+                        <div class="password-container">
+                            <input type="password" id="signup-password" placeholder="Enter your password" class="password" required>
+                            <button type="button" class="toggle-password" onclick="togglePassword('signup-password', this)">
+                                👁️
+                            </button>
+                        </div>    
+                    </div>
+                    <div class="forgot-div">
+                        <button type="submit" id="sign-up" class="signin-submit" onclick="signupSubmit()">Sign up</button>
+                    </div>
+                </div>
+            </div>    
+                
+        </div>
+
+    </div>
+
+    
+
+    <script src="script.js" defer></script>
+</body>
+</html>

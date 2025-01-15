@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillify.com</title>
+    <link rel="icon" href="images/skillify-icon.png"  type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic CSS styling - you can customize this further */
+
+        .contact-information{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+        .information{
+            width: 25%;
+            height: 50%;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            border: 2px solid #694cdb;
+            border-radius: 10px;
+            background-color: rgba(255, 166, 0, 0.248);
+        }
+        .information img{
+            width: 10%;
+        }
+        .information p{
+            color: #240798;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        form {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button[type="submit"] {
+            background-color: #694cdb;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .map{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f6f4f4;
+        }
+        iframe{
+            width: 50%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/skillify-logo.png">
+            </a>
+        </div>
+        <div class="ham-bar">
+            <button class="ham-barbtn"><img src="images/menu.png" alt="Menu" id="menu-icon"></button>
+        </div>
+        <div class="nav">
+            <a href="index.html" class="main">Home</a>
+            <a href="about.html"class="main">About</a>
+            <a href="courses.html"class="main">Courses</a>
+            <a href="contact.html" class="main">Contact</a>
+            <div class="dropdown">
+                <button class="dropbtn">Pages</button>
+                  <div class="dropdown-content">
+                    <a href="teacher.html">Teacher - Profile</a>
+                    <a href="courses.html">Course-Select</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="payment.html">Payment-Page</a>
+            </div> 
+        </div>
+        <div class="sign-btn">
+            <button class="singup-btn">Sing-Up</button>
+            <button class="login-btn">Login</button>
+        </div>
+    </header>
+
+    <section class="head-banner-container">
+
+        <h1 class="banner-head">Contact Us</h1>
+        <div class="abstract">
+            <img src="images/3d abstracts 2.png" class="Tab1">
+            <img src="images/3d abstracts 3.png" class="Tab3">
+            <img src="images/3d abstracts 6.png" class="Tab6">
+            <img src="images/3d abstracts 5.png" class="Tab5">
+        </div>    
+
+    </section>
+    <div class="contact-information">
+        <div class="information"><img src="images/email.png"><p>skillify@gmail.com</p></div>
+        <div class="information"><img src="images/telephone-call.png"><p>+987456321123</p></div>
+        <div class="information"><img src="images/maps-and-flags.png"><p>No.123, Education Street, ABCD Country.</p></div>
+    </div>
+
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4100.190618415145!2d139.80812547656745!3d35.710062672578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ed0d12f9adf%3A0x7d1d4fb31f43f72a!2sTokyo%20Skytree!5e1!3m2!1sen!2sjp!4v1736909188319!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-1">
+                <div class="social">
+                    <img class="social-img" src="images/skillify-logo.png">
+                    <p>Skillify is an innovative e-learning platform offering expert-led courses to help you build in-demand skills. With practical projects and flexible learning, we empower you to achieve your career goals.</p>
+                    <div class="social-logo">
+                            <img src="images/facebook.png">
+                            <img src="images/twitter.png">
+                            <img src="images/linkedin.png">
+                            <img src="images/instagram-logo.png">
+                    </div>
+                </div>
+                <div class="links">
+                    <div class="link1">
+                        <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="teacher.html">Teachers</a></li>
+                    </ul>
+                    </div>
+                    <div class="link2">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="teacher.html">Sign Up</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contact" id="Contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><img src="images/email.png">skillify@gmail.com</li>
+                        <li><img src="images/telephone-call.png">+987456321123</li>
+                        <li><img src="images/maps-and-flags.png">No.123, Education Street, ABCD Country.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-2">
+                <p class="copy">&copy; 2025 Nishanthi. All rights reserved.</p>
+                <div class="policy">
+                        <p>Privacy Policy<p>
+                        <p>Terms</p>
+                        <p><a href="faq.html" style="text-decoration: none;">FAQ</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="go-up" id="goup-btn">
+        <a href="index.html" id="goup-btn"><img src="images/upload.png"></a>
+    </div>
+    
+    <script>
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Create a JavaScript object to represent the data
+            const formData = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            // Send data to server (example using Fetch API)
+            fetch('/api/contact', { 
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                    // Clear the form
+                    contactForm.reset(); 
+                } else {
+                    alert('Error sending message. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            });
+        });
+    </script>
+
+
+    <script src="script.js" defer></script>    
+</body>
+</html>

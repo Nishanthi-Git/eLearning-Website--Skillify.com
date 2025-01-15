@@ -6,6 +6,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Quicksand", serif;
+   
+    
 }
 body{
     position: relative;
@@ -3294,7 +3296,300 @@ footer{
         font-size: 18px;
       }
     
-      
+      .login-container {
+        max-width: 100%;
+        max-height: 500px;
+        border-radius: 20px;
+        margin: 0 auto !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+    
+    /* Image Section */
+    .img-part {
+       position: absolute;
+       top: -30px;
+       left: 25px;
+    }
+    
+    /* Login and Signup Containers */
+    .info-container {
+        min-width: 90%;
+        height: 70%;
+        margin:0px 35px !important;
+        padding: 0;
+    
+    }
+    
+    
+    .login-content,
+    .signup-content {
+        min-width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 30px;
+        border-radius: 0 0 20px 20px;
+        position: relative;
+    }
+    
+    .login-content {
+        background-color: blueviolet;
+        margin-top: 65px !important;
+        z-index: 1;
+    }
+    
+    .signup-content {
+        background-color: orange;
+        display: none;
+        margin-left: 5px !important; /* Hide signup by default */
+        margin-top: -10px;
+    }
+    
+    /* Signup Info Container */
+    .signup-info-container {
+        min-width: 90%;
+        height: 70%;
+        position: absolute;
+        left: 3% !important;
+        top: 100px;
+    }
+    
+    /* Entry Div (Shared by Email and Password Fields) */
+    .entry-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-width: 80%;
+        height: 30%;
+    }
+    .entry-div .entry-email {
+        width: 100%;
+        height: 30%;
+        border-radius: 5px;
+        border: 0;
+        outline: none;
+        padding: 15px;
+        font-size: 1em;
+    }
+    
+    /* Password Container */
+    .password-container {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        gap: 10px;
+    }
+    .password-container .password {
+        width: 90%;
+        height: 100%;
+        border-radius: 5px;
+        border: 0;
+        outline: none;
+        padding: 15px;
+        font-size: 1em;
+    }
+    .toggle-password {
+        height: 80%;
+        width: 10%;
+        margin-top: 4px;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #CDC1FF;
+        border-radius: 50px;
+    }
+    
+    /* Buttons (Login and Signup Toggles) */
+    .button-div, .signbutton-div {
+        position: absolute;
+        min-width: 45%;
+        height: 10%;
+        border: 1px solid blueviolet;
+        border-radius: 10px 10px 0 0;
+        border-bottom: none;
+    }
+    .button-div{
+        top: 89px;
+    }
+    
+    .signbutton-div {
+        top: -63px;
+        left: 56% !important;
+        width: 45.5%;
+        height: 14.8%;
+        border: 1px solid orange;
+    }
+    
+    .button-div button,
+    .signbutton-div button {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 10px 0 0;
+        border: none;
+        font-size: 1.2em !important;
+        font-weight: 800;
+        cursor: pointer;
+    }
+    .button-div button {
+        background-color: blueviolet;
+        color: white;
+    }
+    .signbutton-div button {
+        background-color: orange;
+        color: black;
+    }
+    
+    .button-div button:hover,
+    .signbutton-div button:hover {
+        background-color: orangered;
+        color: white;
+    }
+    
+    /* Google Button */
+    .google-div {
+        min-width: 90%;
+        height: 10%;
+    }
+    .google-div button {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 10px;
+        background-color: white;
+        background-image: url(google.png);
+        background-size: 7%;
+        background-repeat: no-repeat;
+        background-position-x: 8% !important;
+        background-position-y: 50%;
+        font-size: 1em;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .google-div button:hover {
+        transform: scale(1.05);
+    }
+    
+    /* "Or" Divider */
+    .or-div {
+        font-size: 1em;
+        color: white;
+        font-weight: 700;
+    }
+    
+    /* Forgot Password Section */
+    .forgot-div {
+        display: flex;
+        flex-direction: column;
+        min-width: 60%;
+        height: 28%;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .forgot-div button {
+        width: 90%;
+        height: 45%;
+        border-radius: 20px;
+        font-size: 1em;
+        border: none;
+        background-color: orange;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .forgot-div button:hover {
+        background-color: orangered;
+        color: white;
+    }
+    
+    /* Login Submit Button */
+    .forgot-div .signin-submit {
+        width: 90%;
+        height: 40%;
+        border-radius: 20px;
+        font-size: 1em;
+        border: none;
+        background-color: blueviolet;
+        font-weight: 700;
+        cursor: pointer;
+        color: white;
+    }
+    .forgot-div .signin-submit:hover {
+        background-color: orangered;
+    }
+    
+    /* Forgot Password Link */
+    .forgot-div .forget {
+        font-size: 1em;
+        color: white;
+        text-decoration: none;
+    }
+    .forgot-div .forget:hover {
+        transform: scale(1.05);
+    }
+    .faq-container{
+        display: flex;
+        flex-direction: column;
+        min-width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 10px;
+        padding: 50px;
+    }
+    .ques{
+        min-width: 100%;
+        background-color: #CDC1FF;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .ques-1, .ques-2, .ques-3, .ques-4, .ques-5{
+        gap: 5px;
+    }
+    .contact-information{
+        min-width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 60px;
+    }
+    .information{
+        width: 80%;
+        height: 50%;
+        display: flex;
+        align-items:center;
+        justify-content: start;
+        gap: 20px;
+        padding: 20px;
+        border: 2px solid #694cdb;
+        border-radius: 10px;
+        background-color: rgba(255, 166, 0, 0.248);
+    }
+    form{
+        width: 80%;
+        margin-top: 80px;
+    }
+    .map{
+        height: 300px;
+    }
+    iframe{
+        width: 90%;
+        height: 90%;
+    }
+     
 
 
   }
@@ -5240,6 +5535,298 @@ footer{
       .heading{
         font-size: 18px;
       }
+
+      .login-container {
+        max-width: 100%;
+        min-height: 800px  !important;
+        border-radius: 20px;
+        margin: 45px auto !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+    
+    /* Image Section */
+    .img-part {
+       position: absolute;
+       top: -30px;
+       left: 25px;
+    }
+    
+    /* Login and Signup Containers */
+    .info-container {
+        min-width: 90%;
+        height: 70%;
+        margin:0px 35px !important;
+        padding: 0;
+    
+    }
+    
+    
+    .login-content,
+    .signup-content {
+        min-width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 30px;
+        border-radius: 0 0 20px 20px;
+        position: relative;
+    }
+    
+    .login-content {
+        background-color: blueviolet;
+        margin-top: 65px !important;
+        z-index: 1;
+    }
+    
+    .signup-content {
+        background-color: orange;
+        display: none;
+        margin-left: 5px; /* Hide signup by default */
+        margin-top: -10px;
+    }
+    
+    /* Signup Info Container */
+    .signup-info-container {
+        min-width: 90%;
+        height: 70%;
+        position: absolute;
+        left: 3% !important;
+        top: 100px;
+    }
+    
+    /* Entry Div (Shared by Email and Password Fields) */
+    .entry-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-width: 80%;
+        height: 30%;
+    }
+    .entry-div .entry-email {
+        width: 100%;
+        height: 30%;
+        border-radius: 5px;
+        border: 0;
+        outline: none;
+        padding: 15px;
+        font-size: 1em;
+    }
+    
+    /* Password Container */
+    .password-container {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        gap: 10px;
+    }
+    .password-container .password {
+        width: 90%;
+        height: 100%;
+        border-radius: 5px;
+        border: 0;
+        outline: none;
+        padding: 15px;
+        font-size: 1em;
+    }
+    .toggle-password {
+        height: 80%;
+        width: 10%;
+        margin-top: 4px;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #CDC1FF;
+        border-radius: 50px;
+    }
+    
+    /* Buttons (Login and Signup Toggles) */
+    .button-div, .signbutton-div {
+        position: absolute;
+        min-width: 45%;
+        height: 10%;
+        border: 1px solid blueviolet;
+        border-radius: 10px 10px 0 0;
+        border-bottom: none;
+    }
+    .button-div{
+        top: 89px;
+    }
+    
+    .signbutton-div {
+        top: -63px;
+        left: 56% !important;
+        width: 45.5%;
+        height: 14.8%;
+        border: 1px solid orange;
+    }
+    
+    .button-div button,
+    .signbutton-div button {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 10px 0 0;
+        border: none;
+        font-size: 1.2em !important;
+        font-weight: 800;
+        cursor: pointer;
+    }
+    .button-div button {
+        background-color: blueviolet;
+        color: white;
+    }
+    .signbutton-div button {
+        background-color: orange;
+        color: black;
+    }
+    
+    .button-div button:hover,
+    .signbutton-div button:hover {
+        background-color: orangered;
+        color: white;
+    }
+    
+    /* Google Button */
+    .google-div {
+        min-width: 90%;
+        height: 10%;
+    }
+    .google-div button {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 10px;
+        background-color: white;
+        background-image: url(google.png);
+        background-size: 7%;
+        background-repeat: no-repeat;
+        background-position-x: 8% !important;
+        background-position-y: 50%;
+        font-size: 1em;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .google-div button:hover {
+        transform: scale(1.05);
+    }
+    
+    /* "Or" Divider */
+    .or-div {
+        font-size: 1em;
+        color: white;
+        font-weight: 700;
+    }
+    
+    /* Forgot Password Section */
+    .forgot-div {
+        display: flex;
+        flex-direction: column;
+        min-width: 60%;
+        height: 28%;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .forgot-div button {
+        width: 90%;
+        height: 45%;
+        border-radius: 20px;
+        font-size: 1em;
+        border: none;
+        background-color: orange;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .forgot-div button:hover {
+        background-color: orangered;
+        color: white;
+    }
+    
+    /* Login Submit Button */
+    .forgot-div .signin-submit {
+        width: 90%;
+        height: 40%;
+        border-radius: 20px;
+        font-size: 1em;
+        border: none;
+        background-color: blueviolet;
+        font-weight: 700;
+        cursor: pointer;
+        color: white;
+    }
+    .forgot-div .signin-submit:hover {
+        background-color: orangered;
+    }
+    
+    /* Forgot Password Link */
+    .forgot-div .forget {
+        font-size: 1em;
+        color: white;
+        text-decoration: none;
+    }
+    .forgot-div .forget:hover {
+        transform: scale(1.05);
+    }
+    .faq-container{
+        display: flex;
+        flex-direction: column;
+        min-width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 10px;
+        padding: 50px;
+    }
+    .ques{
+        min-width: 100%;
+        background-color: #CDC1FF;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact-information{
+        min-width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 60px;
+    }
+    .information{
+        width: 80%;
+        height: 50%;
+        display: flex;
+        align-items:center;
+        justify-content: start;
+        gap: 20px;
+        padding: 20px;
+        border: 2px solid #694cdb;
+        border-radius: 10px;
+        background-color: rgba(255, 166, 0, 0.248);
+    }
+    form{
+        width: 80%;
+        margin-top: 80px;
+    }
+    .map{
+        height: 300px;
+    }
+    iframe{
+        width: 90%;
+        height: 90%;
+    }
 
 
   }
@@ -7194,12 +7781,304 @@ footer{
       .heading{
         font-size: 18px;
       }
-    
-      
-   
+      /* General Container */
+.login-container {
+    min-width: 90%;
+    height: 600px;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 50px;
+    background-color: #CDC1FF;
+}
+
+/* Image Section */
+.img-part {
+    max-width: 40%;
+    height: 90%;
+    align-content: center;
+}
+.img-part img {
+    width: 80%;
+    margin-left: 0px;
+}
+
+/* Login and Signup Containers */
+.info-container {
+    min-width: 50%;
+    height: 70%;
+    margin-right: 35px;
+    margin-top: 65px;
+}
+
+.login-content,
+.signup-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 30px;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+}
+
+.login-content {
+    background-color: blueviolet;
+    margin-top: 28px;
+    z-index: 1;
+}
+
+.signup-content {
+    background-color: orange;
+    display: none;
+    margin-left: 5px; /* Hide signup by default */
+}
+
+/* Signup Info Container */
+.signup-info-container {
+    min-width: 50%;
+    height: 70%;
+    position: absolute;
+    left: 44.5% !important;
+    top: 150px;
+}
+
+/* Entry Div (Shared by Email and Password Fields) */
+.entry-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 80%;
+    height: 30%;
+}
+.entry-div .entry-email {
+    width: 100%;
+    height: 30%;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    padding: 15px;
+    font-size: 1em;
+}
+
+/* Password Container */
+.password-container {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    gap: 10px;
+}
+.password-container .password {
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    padding: 15px;
+    font-size: 1em;
+}
+.toggle-password {
+    height: 80%;
+    width: 10%;
+    margin-top: 4px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #CDC1FF;
+    border-radius: 50px;
+}
+
+/* Buttons (Login and Signup Toggles) */
+.button-div, .signbutton-div {
+    position: absolute;
+    min-width: 25%;
+    height: 10%;
+    border: 1px solid blueviolet;
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+}
+.button-div{
+    top: 89px;
+}
+
+.signbutton-div {
+    top: -63px;
+    left: 51%;
+    width: 45.5%;
+    height: 14.8%;
+    border: 1px solid orange;
+}
+
+.button-div button,
+.signbutton-div button {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+    border: none;
+    font-size: 1.4em;
+    font-weight: 800;
+    cursor: pointer;
+}
+.button-div button {
+    background-color: blueviolet;
+    color: white;
+}
+.signbutton-div button {
+    background-color: orange;
+    color: black;
+}
+
+.button-div button:hover,
+.signbutton-div button:hover {
+    background-color: orangered;
+    color: white;
+}
+
+/* Google Button */
+.google-div {
+    min-width: 80%;
+    height: 10%;
+}
+.google-div button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    background-image: url(google.png);
+    background-size: 7%;
+    background-repeat: no-repeat;
+    background-position-x: 12%;
+    background-position-y: 50%;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+}
+.google-div button:hover {
+    transform: scale(1.05);
+}
+
+/* "Or" Divider */
+.or-div {
+    font-size: 1em;
+    color: white;
+    font-weight: 700;
+}
+
+/* Forgot Password Section */
+.forgot-div {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 28%;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.forgot-div button {
+    width: 90%;
+    height: 45%;
+    border-radius: 20px;
+    font-size: 1em;
+    border: none;
+    background-color: orange;
+    font-weight: 700;
+    cursor: pointer;
+}
+.forgot-div button:hover {
+    background-color: orangered;
+    color: white;
+}
+
+/* Login Submit Button */
+.forgot-div .signin-submit {
+    width: 90%;
+    height: 40%;
+    border-radius: 20px;
+    font-size: 1em;
+    border: none;
+    background-color: blueviolet;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+}
+.forgot-div .signin-submit:hover {
+    background-color: orangered;
+}
+
+/* Forgot Password Link */
+.forgot-div .forget {
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+}
+.forgot-div .forget:hover {
+    transform: scale(1.05);
+}
+.faq-container{
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 10px;
+    padding: 50px;
+}
+.ques{
+    min-width: 60%;
+    background-color: #CDC1FF;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-information{
+    min-width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 100px;
+}
+.information{
+    width: 60%;
+    height: 50%;
+    display: flex;
+    align-items:center;
+    justify-content: start;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid #694cdb;
+    border-radius: 10px;
+    background-color: rgba(255, 166, 0, 0.248);
+}
+form{
+    width: 60%;
+    margin-top: 100px;
+}
+.map{
+    height: 300px;
+}
+iframe{
+    width: 90%;
+    height: 90%;
+}
 
 
-  }
+}
   
   @media (min-width: 1025px) and (max-width: 1440px) {
     /* Styles for Laptops and Desktops */
@@ -11100,4 +11979,307 @@ input[type="range"]:focus {
 .go-up.show {
     display: block;
     opacity: 1;
+}
+
+
+
+/* General Container */
+.login-container {
+    width: 80%;
+    height: 600px;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #CDC1FF;
+}
+
+/* Image Section */
+.img-part {
+    width: 50%;
+    height: 90%;
+}
+.img-part img {
+    width: 80%;
+    margin-left: 70px;
+}
+
+/* Login and Signup Containers */
+.info-container {
+    width: 40%;
+    height: 70%;
+    margin-right: 35px;
+    margin-top: 65px;
+}
+
+.login-content,
+.signup-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 30px;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+}
+
+.login-content {
+    background-color: blueviolet;
+    margin-top: 28px;
+    z-index: 1;
+}
+
+.signup-content {
+    background-color: orange;
+    display: none;
+    margin-left: 0px; /* Hide signup by default */
+}
+
+/* Signup Info Container */
+.signup-info-container {
+    width: 40%;
+    height: 70%;
+    position: absolute;
+    left: 53.5%;
+    top: 150px;
+}
+
+/* Entry Div (Shared by Email and Password Fields) */
+.entry-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 60%;
+    height: 30%;
+}
+.entry-div .entry-email {
+    width: 100%;
+    height: 30%;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    padding: 15px;
+    font-size: 1em;
+}
+
+/* Password Container */
+.password-container {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    gap: 10px;
+}
+.password-container .password {
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    padding: 15px;
+    font-size: 1em;
+}
+.toggle-password {
+    height: 80%;
+    width: 10%;
+    margin-top: 4px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #CDC1FF;
+    border-radius: 50px;
+}
+
+/* Buttons (Login and Signup Toggles) */
+.button-div, .signbutton-div {
+    position: absolute;
+    width: 18%;
+    height: 10%;
+    border: 1px solid blueviolet;
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+}
+.button-div{
+    top: 89px;
+}
+
+.signbutton-div {
+    top: -63px;
+    left: 55%;
+    width: 45%;
+    height: 14.8%;
+    border: 1px solid orange;
+}
+
+.button-div button,
+.signbutton-div button {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+    border: none;
+    font-size: 1.4em;
+    font-weight: 800;
+    cursor: pointer;
+}
+.button-div button {
+    background-color: blueviolet;
+    color: white;
+}
+.signbutton-div button {
+    background-color: orange;
+    color: black;
+}
+
+.button-div button:hover,
+.signbutton-div button:hover {
+    background-color: orangered;
+    color: white;
+}
+
+/* Google Button */
+.google-div {
+    width: 60%;
+    height: 10%;
+}
+.google-div button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    background-image: url(google.png);
+    background-size: 7%;
+    background-repeat: no-repeat;
+    background-position-x: 12%;
+    background-position-y: 50%;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+}
+.google-div button:hover {
+    transform: scale(1.05);
+}
+
+/* "Or" Divider */
+.or-div {
+    font-size: 1em;
+    color: white;
+    font-weight: 700;
+}
+
+/* Forgot Password Section */
+.forgot-div {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 28%;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.forgot-div button {
+    width: 90%;
+    height: 45%;
+    border-radius: 20px;
+    font-size: 1em;
+    border: none;
+    background-color: orange;
+    font-weight: 700;
+    cursor: pointer;
+}
+.forgot-div button:hover {
+    background-color: orangered;
+    color: white;
+}
+
+/* Login Submit Button */
+.forgot-div .signin-submit {
+    width: 90%;
+    height: 40%;
+    border-radius: 20px;
+    font-size: 1em;
+    border: none;
+    background-color: blueviolet;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+}
+.forgot-div .signin-submit:hover {
+    background-color: orangered;
+}
+
+/* Forgot Password Link */
+.forgot-div .forget {
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+}
+.forgot-div .forget:hover {
+    transform: scale(1.05);
+}
+
+.ques-1,.ques-2,.ques-3,.ques-4,.ques-5, .quesbtn{
+    background: none;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.quesbtn img{
+    width: 30px;
+    height: 30px;
+}
+
+.faq-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 10px;
+    padding: 50px;
+}
+.ques{
+    width: 50%;
+    background-color: #CDC1FF;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ques-1, .ques-2, .ques-3, .ques-4, .ques-5 {
+    background-color: #f8f8f8;
+    padding: 15px;
+    cursor: pointer;
+    display: flex; /* Use flexbox for smoother transitions */
+    align-items: center; 
+}
+.ques-1 p, .ques-2 p, .ques-3 p, .ques-4 p, .ques-5 p {
+    margin: 0;
+    flex-grow: 1; /* Allow question text to expand */
+}
+.answer-1, .answer-2, .answer-3, .answer-4, .answer-5 {
+    background-color: #fff;
+    overflow: hidden; 
+    max-height: 0; 
+    transition: max-height 0.2s ease-in-out; 
+    transform: translateY(-10px); /* Initial transform */
+    opacity: 0; /* Initial opacity */
+}
+
+.answer-1.active, .answer-2.active, .answer-3.active, .answer-4.active, .answer-5.active {
+    display: block; 
+    max-height: 200px; /* Set a maximum height for the expanded answer */
+    transform: translateY(0); /* Reset transform */
+    opacity: 1; /* Show answer content */
+    padding: 15px;
 }

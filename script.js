@@ -1,4 +1,5 @@
-/* index.html Specific Code */
+
+
 
 /* Menu bar toggle */
 document.querySelector('.ham-barbtn').addEventListener('click', function() {
@@ -12,6 +13,35 @@ document.querySelector('.ham-barbtn').addEventListener('click', function() {
     }
     
 });
+
+
+
+/* Login Button */
+
+
+/* Button Handlers */
+
+// Handle the Login button
+const loginButton = document.getElementById("log-in");
+if (loginButton) {
+    loginButton.addEventListener("click", function () {
+        window.location.href = "login.html";
+    });
+} else {
+    console.error("Login button not found!");
+}
+
+// Handle the Sign-Up button
+const signUpButton = document.getElementById("sign-up");
+if (signUpButton) {
+    signUpButton.addEventListener("click", function () {
+        window.location.href = "login.html";
+    });
+} else {
+    console.error("Sign-Up button not found!");
+}
+
+
 
 
 /* Go-Up Button */
@@ -34,6 +64,253 @@ goUpButton.addEventListener('click', () => {
     });
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+// FAQ
+
+const quesBtns = document.querySelectorAll('.quesbtn');
+
+quesBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const answer = btn.parentElement.nextElementSibling; 
+        const img = btn.querySelector('img'); 
+
+        answer.classList.toggle('active'); // Toggle the 'active' class
+
+        if (answer.classList.contains('active')) {
+            img.src = 'minus.png'; 
+        } else {
+            img.src = 'add.png'; 
+        }
+    });
+});
+
+
+
+
+
+/* index.html Specific Code */
+
+
+// Login form submission logic
+async function loginSubmit() {
+    // Get form data
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+
+    console.log("Form submitted. Sending data to backend...");
+
+    try {
+        // Send data to the backend
+        const response = await fetch('/api/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }), // Send as JSON
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log("Login successful:", data);
+            showAlert("Login successful!");
+            localStorage.setItem('authToken', data.token); // Save token securely
+        } else {
+            console.error("Login failed. Status:", response.status);
+            showAlert("Invalid email or password.");
+        }
+    } catch (error) {
+        console.error("Error occurred while logging in:", error);
+        showAlert("An error occurred. Please try again.");
+    }
+}
+
+// Signup form submission logic
+async function signupSubmit() {
+    const email = document.getElementById('signup-email').value;
+    const password = document.getElementById('signup-password').value;
+
+    console.log("Sign-up form submitted. Sending data to backend...");
+
+    try {
+        const response = await fetch('/api/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log("Sign-up successful:", data);
+            showAlert("Sign-up successful! Please log in.");
+        } else {
+            console.error("Sign-up failed. Status:", response.status);
+            showAlert("Sign-up failed. Please try again.");
+        }
+    } catch (error) {
+        console.error("Error occurred while signing up:", error);
+        showAlert("An error occurred. Please try again.");
+    }
+}  
+
+// Toggle password visibility
+function togglePassword(inputId, button) {
+    const passwordField = document.getElementById(inputId);
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        button.textContent = '🙈'; // Change icon to "hide"
+    } else {
+        passwordField.type = 'password';
+        button.textContent = '👁️'; // Change icon to "show"
+    }
+}
+
+// Show login form
+function showLogin() {
+    document.getElementById('login').addEventListener('click', () => {
+        document.getElementById('login-content').style.display = 'flex';
+        document.getElementById('signup-content').style.display = 'none';
+    });
+}
+
+// Show signup form
+function showSignUp() {
+    document.getElementById('signup').addEventListener('click', () => {
+        document.getElementById('signup-content').style.display = 'flex';
+        document.getElementById('login-content').style.display = 'none';
+    });
+}
+
+// Initialize login/signup forms
+window.onload = () => {
+    showLogin();
+    showSignUp();
+};
+
+// Login Validation
+document.getElementById('log-in').addEventListener('click', (event) => {
+    // Prevent form submission
+    event.preventDefault();
+
+    const emailInput = document.getElementById('login-email');
+    const passwordInput = document.getElementById('login-password');
+
+    const email = emailInput.value.trim();  // Trim spaces from email input
+    const password = passwordInput.value;
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  // Regex for email validation
+
+    // Validate email and password
+    if (!email) {
+        showAlert('Please enter your email.', 'error');
+        return;
+    } else if (!emailRegex.test(email)) {
+        showAlert('Please enter a valid email address.', 'error');
+        return;
+    } else if (!password) {
+        showAlert('Please enter your password.', 'error');
+        return;
+    }
+
+    // If validation passes, call the login function
+    loginSubmit();
+
+    // Clear the input fields after successful login
+    emailInput.value = '';
+    passwordInput.value = '';
+});
+
+// Signup Validation
+document.getElementById('sign-up').addEventListener('click', (event) => {
+    // Prevent form submission
+    event.preventDefault();
+
+    const emailInput = document.getElementById('signup-email');
+    const passwordInput = document.getElementById('signup-password');
+
+    const email = emailInput.value.trim();
+    const password = passwordInput.value;
+
+    // Validate email and password
+    if (!email) {
+        showAlert('Please enter your email.', 'error');
+        return;
+    } else if (!password) {
+        showAlert('Please enter your password.', 'error');
+        return;
+    }
+
+    // Password length validation
+    if (password.length < 6) {
+        showAlert('Password must be at least 6 characters long.', 'error');
+        return;
+    }
+
+    // If validation passes, call the signup function
+    signupSubmit();
+
+    // Clear the input fields after successful signup
+    emailInput.value = '';
+    passwordInput.value = '';
+});
+
+// Function to create a styled alert box
+function showAlert(message, type) {
+    // Create a new div element for the alert box
+    const alertBox = document.createElement('div');
+    
+    // Add the appropriate class based on the type (success, warning, error)
+    alertBox.classList.add('alert-box', type);
+
+    // Set the message content
+    alertBox.textContent = message;
+
+    // Style the alert box directly in JavaScript
+    alertBox.style.position = 'fixed';
+    alertBox.style.top = '50px';
+    alertBox.style.left = '50%';
+    alertBox.style.transform = 'translateX(-50%)';
+    alertBox.style.padding = '20px';
+    alertBox.style.color = 'black';
+    alertBox.style.backgroundColor = 'white';
+    alertBox.style.fontSize = '16px';
+    alertBox.style.borderRadius = '5px';
+    alertBox.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
+    alertBox.style.zIndex = '1000';
+
+    // Apply different background colors based on alert type
+    if (type === 'success') {
+        alertBox.style.backgroundColor = '#4CAF50'; // Green for success
+    } else if (type === 'warning') {
+        alertBox.style.backgroundColor = '#FF9800'; // Orange for warning
+    } else if (type === 'error') {
+        alertBox.style.backgroundColor = '#f44336'; // Red for error
+    }
+
+    // Add the alert box to the body of the document
+    document.body.appendChild(alertBox);
+
+    // Automatically remove the alert after 5 seconds
+    setTimeout(() => {
+        alertBox.style.transition = 'opacity 0.5s ease-out';
+        alertBox.style.opacity = '0';
+        setTimeout(() => {
+            document.body.removeChild(alertBox);
+        }, 500);
+    }, 5000);
+}
 
 
 
@@ -161,6 +438,12 @@ if (myButton) {
     console.error("Button with ID 'myButton' not found!");
 }
 
+
+
+
+
+
+
 /* teacher.html Specific Code */
 document.addEventListener("DOMContentLoaded", () => {
     const skillBars = document.querySelectorAll(".skill-bar");
@@ -213,4 +496,6 @@ document.querySelector('.filter-btn')?.addEventListener('click', function() {
     var filterContent = document.getElementById('filterContent');
     filterContent.classList.remove('active');
 });
+
+
 
