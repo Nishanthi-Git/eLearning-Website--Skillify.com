@@ -3586,7 +3586,7 @@ footer{
         height: 300px;
     }
     iframe{
-        width: 90%;
+        min-width: 90%;
         height: 90%;
     }
      
